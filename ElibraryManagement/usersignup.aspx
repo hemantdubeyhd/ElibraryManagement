@@ -1,8 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="usersignup.aspx.cs" Inherits="ElibraryManagement.usersignup" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+   
+     <script src="JavaScript123.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
+   
+     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
 
@@ -75,23 +78,33 @@
                         </div>
                  <%--3rd Row-------------------------------------------------------------------------%>
 
-                        <div class="row">
-                            <div class="col md-6">
-                                <label>Suburb</label>
-                                <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Suburb"></asp:TextBox>
-                                </div>
-                            </div>
+         <%--                 
+                              <div class="form-header">Suburb</div>
+                                
+                                    <asp:TextBox class="form-control" ID="suburb" runat="server" placeholder="Suburb"></asp:TextBox>
+                               
+                         
 
+                         <div class="form-header">Postcode</div>
+       
+                        <asp:TextBox class="form-control" ID="postcode" runat="server" placeholder="Postcode"></asp:TextBox>
+      --%>         
 
-                            <div class="col md-6">
-                                <label>Postcode</label>
-                                <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Postcode" TextMode="Number"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-
+   
+        
+        <div class="form-header">Suburb</div>
+        <input type="text" class="form-input" id="suburb" placeholder="Search Suburn/Postcade here..." />
+        
+        <div class="form-header">State</div>
+        <input class="form-input" id="state" />
+        
+        <div class="form-header">Postcode</div>
+        <input class="form-input" id="postcode" />
+      
+        
+      
+       
+        
 
                         <div class="row">
                             <div class="col">
@@ -126,7 +139,7 @@
                             <div class="col md-6">
                                 <label>Pet Age</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Pet Name" TextMode="Number"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Pet age" ></asp:TextBox>
                                 </div>
                             </div>
 
@@ -154,7 +167,7 @@
                             <div class="col">
                                 <label>Photo/Image of Pet</label>
                                 <div >
-                                    <asp:FileUpload CssClass="form-control" ID="FileUpload1" runat="server" />
+                                  <%--  <asp:FileUpload CssClass="form-control" ID="FileUpload1" runat="server" /> --%>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +209,7 @@
                             <div class="col">
                                 
                                 <div class="form-group">
-                                    <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Sign Up" />
+                                    <asp:Button class="btn btn-success btn-block btn-lg" ID="Button1" runat="server" Text="Sign Up" OnClick="Button1_Click" />
                                </div>
 
                                 
