@@ -13,5 +13,15 @@ namespace ElibraryManagement
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userlogin.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("usersignup.aspx");
+        }
     }
 }
