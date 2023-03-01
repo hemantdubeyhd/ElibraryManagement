@@ -1,8 +1,6 @@
-﻿alert("Astrid");
-//alert("hello world");
-function show_alert() {
-    alert("button clicked");
-    return false;
+﻿alert("hello008");
+function showValue() {
+    alert(document.getElementById("txtName").value);
 }
 (function () {
     var widget, initAddressFinder = function () {

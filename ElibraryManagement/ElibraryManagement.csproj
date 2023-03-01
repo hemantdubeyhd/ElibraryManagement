@@ -74,6 +74,7 @@
     <Content Include="css\customestylesheet.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
+    <Content Include="demo.aspx" />
     <Content Include="fontawesome\css\all.css" />
     <Content Include="fontawesome\css\all.min.css" />
     <Content Include="fontawesome\css\brands.css" />
@@ -2160,16 +2161,22 @@
     <Content Include="imgs\vet2.jpg" />
     <Content Include="imgs\vet3.jpg" />
     <Content Include="imgs\writer.png" />
-    <Content Include="JavaScript123.js" />
+    <Content Include="JavaScript111.js" />
     <Content Include="location.aspx" />
     <Content Include="ourPeople.aspx" />
-    <Content Include="scripts.js" />
     <Content Include="services.aspx" />
     <Content Include="userlogin.aspx" />
     <Content Include="usersignup.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="demo.aspx.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo.aspx.designer.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

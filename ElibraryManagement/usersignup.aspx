@@ -1,10 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="usersignup.aspx.cs" Inherits="ElibraryManagement.usersignup" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   
-     <script src="JavaScript123.js" type="text/javascript"></script>
+   <script src="JavaScript111.js" type="text/javascript"></script>
+     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
+<%--
+  <h1>Trying javascript with AspTextBox</h1>
+    <asp:TextBox ID="txtName" runat="server" ClientIDMode="Static"></asp:TextBox>
+    <asp:Button ID="btnShowValue" text="show value" onClientClick="showValue()" runat="server" />--%>
+
      <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
@@ -46,7 +50,7 @@
                             <div class="col md-6">
                                 <label>First Name</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="First Name"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="First Name" ></asp:TextBox>
                                 </div>
                             </div>
 
@@ -54,7 +58,7 @@
                             <div class="col md-6">
                                 <label>Surname</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Surname"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Surname" ></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +68,7 @@
                             <div class="col md-6">
                                 <label>Contact Ph No.</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Conatct Ph No." TextMode="Phone"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Conatct Ph No." TextMode="Phone" ></asp:TextBox>
                                 </div>
                             </div>
 
@@ -72,37 +76,27 @@
                             <div class="col md-6">
                                 <label>Email Address</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Email Address" TextMode="Email"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Email Address" TextMode="Email" ClientIDMode="Static"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                  <%--3rd Row-------------------------------------------------------------------------%>
 
-         <%--                 
-                              <div class="form-header">Suburb</div>
-                                
-                                    <asp:TextBox class="form-control" ID="suburb" runat="server" placeholder="Suburb"></asp:TextBox>
+                  
+                           
+                                 <div class="form-header">Suburb</div>
+                              
+                                    <asp:TextBox class="form-input" ID="suburb" runat="server" placeholder="suburb" TextMode="Phone" ClientIDMode="Static"></asp:TextBox>
+                           
+                            
+
+
+                            
+                               <div class="form-header">Postcode</div>
                                
-                         
-
-                         <div class="form-header">Postcode</div>
-       
-                        <asp:TextBox class="form-control" ID="postcode" runat="server" placeholder="Postcode"></asp:TextBox>
-      --%>         
-
-   
-        
-        <div class="form-header">Suburb</div>
-        <input type="text" class="form-input" id="suburb" placeholder="Search Suburn/Postcade here..." />
-        
-        <div class="form-header">State</div>
-        <input class="form-input" id="state" />
-        
-        <div class="form-header">Postcode</div>
-        <input class="form-input" id="postcode" />
-      
-        
-      
+                                    <asp:TextBox class="form-input" ID="postcode" runat="server" placeholder="postcode" ClientIDMode="Static"></asp:TextBox>
+                              
+            
        
         
 
@@ -120,7 +114,7 @@
                             <div class="col md-6">
                                 <label>Pet Name</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Pet Name"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Pet Name" ClientIDMode="Static"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -128,7 +122,7 @@
                             <div class="col md-6">
                                 <label>Pet Breed</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control"  runat="server" placeholder="Pet Breed" ></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox12" runat="server" placeholder="Pet Breed" ClientIDMode="Static"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +133,7 @@
                             <div class="col md-6">
                                 <label>Pet Age</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Pet age" ></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Pet age" ClientIDMode="Static"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -147,7 +141,7 @@
                             <div class="col md-6">
                                 <label>Pet Gender</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control"  runat="server" placeholder="Pet Gender" ></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID=TextBox13 runat="server" placeholder="Pet Gender" ClientIDMode="Static"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +182,7 @@
                             <div class="col md-6">
                                 <label>User Id</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="User Id" ></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="User Id" ClientIDMode="Static"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -196,7 +190,7 @@
                             <div class="col md-6">
                                 <label>Password</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control"  runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox14" runat="server" placeholder="Password" TextMode="Password" ClientIDMode="Static"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -231,5 +225,6 @@
         </div>
 
     </div>
+    
 
 </asp:Content>
