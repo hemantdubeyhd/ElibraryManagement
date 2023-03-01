@@ -66,5 +66,18 @@ namespace ElibraryManagement
         {
             Response.Redirect("usersignup.aspx");
         }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script>alert('Login Successful');</script>");
+            Session["username"] = "";
+            Session["fullname"] = "";
+            Session["role"] = "";
+
+            LinkButton1.Visible = true; //User loging link button
+            LinkButton2.Visible = true; //User Signup link button
+            LinkButton3.Visible = false; //logout link button
+            LinkButton7.Visible = false; //Hello User link button
+        }
     }
 }
