@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net;
+using MailKit.Net.Pop3;
 
 namespace ElibraryManagement
 {
@@ -42,6 +43,27 @@ namespace ElibraryManagement
             smtp.Send(mail);
 
             lblMsg.Text = "Email Sent Successfully";
+
+            // Receive confirmation reply
+            Pop3Client popClient = new Pop3Client("pop.gmail.com", 995, true, "hemantdubeyhd@gmail.com", "texqzhnswxxrnhfv");
+            popClient.Connect();
+
+            popClient.Authenticate();
+
+            int messageCount = popClient.GetMessageCount();
+            Pop3Message[] messages = popClient.GetMessages(messageCount, messageCount);
+
+            foreach (Pop3Message msg in messages)
+            {
+                if (msg.Headers.Subject.Contains("Confirmation email"))
+                {
+                    // Do something with the confirmation email
+                    string body = msg.FindFirstHtmlVersion().GetBodyAsText();
+                    break;
+                }
+            }
+
+            popClient.Disconnect();
 
         }
     }
