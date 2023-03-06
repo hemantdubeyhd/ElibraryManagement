@@ -78,6 +78,7 @@ namespace ElibraryManagement
             LinkButton2.Visible = true; //User Signup link button
             LinkButton3.Visible = false; //logout link button
             LinkButton7.Visible = false; //Hello User link button
+
         }
     }
 }

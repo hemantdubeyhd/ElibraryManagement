@@ -2164,6 +2164,7 @@
     <Content Include="JavaScript111.js" />
     <Content Include="location.aspx" />
     <Content Include="ourPeople.aspx" />
+    <Content Include="puppyPlayDate.aspx" />
     <Content Include="services.aspx" />
     <Content Include="userlogin.aspx" />
     <Content Include="usersignup.aspx" />
@@ -2199,6 +2200,13 @@
       <DependentUpon>ourPeople.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="puppyPlayDate.aspx.cs">
+      <DependentUpon>puppyPlayDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="puppyPlayDate.aspx.designer.cs">
+      <DependentUpon>puppyPlayDate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="services.aspx.cs">
       <DependentUpon>services.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
