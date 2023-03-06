@@ -5,6 +5,7 @@ using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
 
 namespace ElibraryManagement
 {
@@ -14,24 +15,34 @@ namespace ElibraryManagement
         {
             GridView1.DataBind();
         }
-        protected void sendInvitationButton_Click(object sender, EventArgs e)
+
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            // Get the email addresses of the attendees
-            string[] emailAddresses = attendees.Text.Split(',');
+            string toEmails = Email.Text;
+            string sub = Subject.Text;
 
-            // Create the email message
-            MailMessage message = new MailMessage();
-            message.From = new MailAddress("youremail@example.com");
-            foreach (string emailAddress in emailAddresses)
+            MailMessage mail = new MailMessage();
+            mail.From = new MailAddress("hemantdubeyme@gmail.com","Hemant");
+            mail.Subject = sub;
+            mail.Body = sub;
+            mail.IsBodyHtml = true;
+
+            string[] ToEMailsMultiIds=toEmails.Split(',');
+            foreach(string toEmail in ToEMailsMultiIds)
             {
-                message.To.Add(new MailAddress(emailAddress.Trim()));
+                mail.To.Add(new MailAddress(toEmail));
             }
-            message.Subject = "Invitation to " + eventName.Text;
-            message.Body = "You are invited to attend " + eventName.Text + " on " + eventDate.Text + " at " + eventTime.Text + " at " + eventLocation.Text + ". Please click the link below to confirm your attendance: " /*+ confirmationLink*/;
 
-            // Send the email message
-            SmtpClient client = new SmtpClient();
-            client.Send(message);
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+            smtp.Port = 587;
+            smtp.EnableSsl = true;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new System.Net.NetworkCredential("hemantdubeyhd@gmail.com", "texqzhnswxxrnhfv");
+            
+            smtp.Send(mail);
+
+            lblMsg.Text = "Email Sent Successfully";
+
         }
     }
 }

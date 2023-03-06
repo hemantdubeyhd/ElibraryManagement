@@ -2,13 +2,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">
-        /*$(document).ready(function () {
-            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).datatable();
-    });*/
+        
         $(document).ready(function () {
             $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable();
         });
+       
     </script>
+    
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -83,27 +83,24 @@
 
 <div class="container">
      <div>
-            <label for="eventName">Event Name:</label>
-            <asp:TextBox ID="eventName" runat="server"></asp:TextBox>
+            <label for="Email">Email(s):</label>
+         
+            <asp:TextBox ID="Email" runat="server" ClientIDMode="Static"></asp:TextBox>
+        </div>
+        
+        
+       
+           <div>
+            <label for="Suject">Suject:</label>
+            <asp:TextBox ID="Subject" runat="server" TextMode="MultiLine" ClientIDMode="Static"></asp:TextBox>
         </div>
         <div>
-            <label for="eventDate">Event Date:</label>
-            <asp:TextBox ID="eventDate" runat="server"></asp:TextBox>
-        </div>
-        <div>
-            <label for="eventTime">Event Time:</label>
-            <asp:TextBox ID="eventTime" runat="server"></asp:TextBox>
-        </div>
-        <div>
-            <label for="eventLocation">Event Location:</label>
-            <asp:TextBox ID="eventLocation" runat="server"></asp:TextBox>
-        </div>
-        <div>
-            <label for="attendees">Attendees:</label>
-            <asp:TextBox ID="attendees" runat="server"></asp:TextBox>
-        </div>
-        <div>
-             <asp:Button ID="sendInvitationButton" runat="server" Text="Send Invitation" OnClick="sendInvitationButton_Click" />
+           
+    
+            <asp:Button ID="Button1" runat="server" Text="Send Invitation" OnClick="Button1_Click"/>
+            <br />
+            <br />
+             <asp:label ID="lblMsg" runat="server" Text=""></asp:label>
         </div>
                 </div>
                 <a href="homepage.aspx"><< Back to Home</a>

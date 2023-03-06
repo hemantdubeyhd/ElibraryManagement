@@ -33,57 +33,39 @@ namespace ElibraryManagement
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// eventName control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox eventName;
+        protected global::System.Web.UI.WebControls.TextBox Email;
 
         /// <summary>
-        /// eventDate control.
+        /// Subject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox eventDate;
+        protected global::System.Web.UI.WebControls.TextBox Subject;
 
         /// <summary>
-        /// eventTime control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox eventTime;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// eventLocation control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox eventLocation;
-
-        /// <summary>
-        /// attendees control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox attendees;
-
-        /// <summary>
-        /// sendInvitationButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sendInvitationButton;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
     }
 }
