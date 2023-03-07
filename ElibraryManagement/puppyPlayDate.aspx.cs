@@ -23,13 +23,13 @@ namespace ElibraryManagement
             string sub = Subject.Text;
 
             MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("hemantdubeyme@gmail.com","Hemant");
+            mail.From = new MailAddress("hemantdubeyme@gmail.com", "Hemant");
             mail.Subject = sub;
             mail.Body = sub;
             mail.IsBodyHtml = true;
 
-            string[] ToEMailsMultiIds=toEmails.Split(',');
-            foreach(string toEmail in ToEMailsMultiIds)
+            string[] ToEMailsMultiIds = toEmails.Split(',');
+            foreach (string toEmail in ToEMailsMultiIds)
             {
                 mail.To.Add(new MailAddress(toEmail));
             }
@@ -39,31 +39,12 @@ namespace ElibraryManagement
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = new System.Net.NetworkCredential("hemantdubeyhd@gmail.com", "texqzhnswxxrnhfv");
-            
+
             smtp.Send(mail);
 
             lblMsg.Text = "Email Sent Successfully";
 
             // Receive confirmation reply
-            Pop3Client popClient = new Pop3Client("pop.gmail.com", 995, true, "hemantdubeyhd@gmail.com", "texqzhnswxxrnhfv");
-            popClient.Connect();
-
-            popClient.Authenticate();
-
-            int messageCount = popClient.GetMessageCount();
-            Pop3Message[] messages = popClient.GetMessages(messageCount, messageCount);
-
-            foreach (Pop3Message msg in messages)
-            {
-                if (msg.Headers.Subject.Contains("Confirmation email"))
-                {
-                    // Do something with the confirmation email
-                    string body = msg.FindFirstHtmlVersion().GetBodyAsText();
-                    break;
-                }
-            }
-
-            popClient.Disconnect();
 
         }
     }

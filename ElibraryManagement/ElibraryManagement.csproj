@@ -98,6 +98,7 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.2.1.slim.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
+    <Content Include="catordog.aspx" />
     <Content Include="css\customestylesheet.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
@@ -2198,6 +2199,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="catordog.aspx.cs">
+      <DependentUpon>catordog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catordog.aspx.designer.cs">
+      <DependentUpon>catordog.aspx</DependentUpon>
+    </Compile>
     <Compile Include="demo.aspx.cs">
       <DependentUpon>demo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

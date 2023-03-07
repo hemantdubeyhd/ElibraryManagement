@@ -14,6 +14,15 @@
     <br />
 
     <div class="container">
+         <div class="row">
+            <div class="col-12">
+                <center>
+                   <h2><%--DOG or CAT --%></h2>
+
+                </center>
+            </div>
+        </div>
+        <br />
         <div class="row">
             <div class="col-12">
                 <center>
