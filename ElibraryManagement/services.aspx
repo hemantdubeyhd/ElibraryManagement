@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="services.aspx.cs" Inherits="ElibraryManagement.services" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="./dogorcat.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -15,7 +16,7 @@
             <div class="row">
                 <div class="col-12">
                     <center>
-                        <img width="200px" src="imgs/pg2Dog.jpg" />
+                        <img id="image" width="200px" src="imgs/pg2Dog.jpg" />
                         <h1>SERVICES</h1>
                     </center>
                 </div>

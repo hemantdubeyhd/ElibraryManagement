@@ -97,7 +97,7 @@
         <div>
            
     
-            <asp:Button ID="Button1" runat="server" Text="Send Invitation" OnClick="Button1_Click"/>
+            <asp:Button ID="Button1" runat="server" Text="Send Invitation" OnClick="Button1_Click" ClientIDMode="Static" />
             <br />
             <br />
              <asp:label ID="lblMsg" runat="server" Text=""></asp:label>

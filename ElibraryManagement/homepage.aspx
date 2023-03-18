@@ -17,7 +17,23 @@
          <div class="row">
             <div class="col-12">
                 <center>
-                   <h2><%--DOG or CAT --%></h2>
+                   <div class="row">
+            <div class="col-12">
+                <center>
+                    <input id="dogButton" type="button" value="I'm a Dog person" onClick="ChangeImageDog()" />
+                    <input id="catButton" type="button" value="I'm a Cat person" onClick="ChangeImageCat()" />
+                   <h2>WHO WE ARE</h2>
+                </center>
+            </div>
+        </div>
+                    <div class="row">
+                <div class="col-12">
+                    <center>
+                        <img id="image" width="200px" src="imgs/pg2Dog.jpg" />
+                        
+                    </center>
+                </div>
+            </div>
 
                 </center>
             </div>
@@ -57,4 +73,5 @@
             
         </div>
     </div>
+    <script src="dogorcat.js" type="text/javascript"></script>
 </asp:Content>

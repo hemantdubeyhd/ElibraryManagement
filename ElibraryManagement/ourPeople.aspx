@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ourPeople.aspx.cs" Inherits="ElibraryManagement.ourPeople" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    
 </asp:Content>
 
 
@@ -17,7 +19,7 @@
             <div class="row">
                 <div class="col-12">
                     <center>
-                        <img width="200px" src="imgs/pg2Dog.jpg" />
+                        <img id="image" width="200px" src="imgs/pg2Dog.jpg" />
                         <h1>Our People</h1>
                     </center>
                 </div>
@@ -115,5 +117,6 @@
             </div>
        
     </section>
+    <script src="dogorcat.js" type="text/javascript"></script>
 </asp:Content> 
     

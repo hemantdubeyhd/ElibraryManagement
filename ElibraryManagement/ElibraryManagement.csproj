@@ -103,6 +103,7 @@
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
     <Content Include="demo.aspx" />
+    <Content Include="dogorcat.js" />
     <Content Include="fontawesome\css\all.css" />
     <Content Include="fontawesome\css\all.min.css" />
     <Content Include="fontawesome\css\brands.css" />
@@ -2162,6 +2163,8 @@
     <Content Include="imgs\book-online.png" />
     <Content Include="imgs\books.png" />
     <Content Include="imgs\books1.png" />
+    <Content Include="imgs\cat1.jpg" />
+    <Content Include="imgs\cat222.jpg" />
     <Content Include="imgs\defaulters-list - Copy %282%29.png" />
     <Content Include="imgs\Dental450x250.jpg" />
     <Content Include="imgs\dogandvet450x250.jpg" />

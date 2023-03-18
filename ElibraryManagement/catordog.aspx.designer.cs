@@ -13,23 +13,5 @@ namespace ElibraryManagement
 
     public partial class catordog
     {
-
-        /// <summary>
-        /// dogButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button dogButton;
-
-        /// <summary>
-        /// catButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button catButton;
     }
 }

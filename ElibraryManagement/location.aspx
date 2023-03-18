@@ -1,12 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="location.aspx.cs" Inherits="ElibraryManagement.location" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="./dogorcat.js" type="text/javascript">
+        
+    </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
 
     <section>      
-        <img src="imgs/friendlyVet.jpg" class="img-fluid" />
+        <img id="image" src="imgs/friendlyVet.jpg" class="img-fluid" />
      </section>
     
     <section>
