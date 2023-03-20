@@ -1,4 +1,4 @@
-﻿alert("hello008");
+﻿
 function showValue() {
     alert(document.getElementById("txtName").value);
 }

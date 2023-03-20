@@ -38,7 +38,7 @@ namespace ElibraryManagement
                     while (dr.Read())
                     {
 
-                        Response.Write("<script>alert('Login Successful');</script>");
+                       // Response.Write("<script>alert('Login Successful');</script>");
                         Session["username"] = dr.GetValue(10).ToString();
                         Session["fullname"] = dr.GetValue(0).ToString();
                         Session["role"] = "user";

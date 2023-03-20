@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="services.aspx.cs" Inherits="ElibraryManagement.services" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="./dogorcat.js" type="text/javascript"></script>
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -117,6 +117,6 @@ Eventually bacteria in the mouth can spread through the bloodstream to the rest 
        
     </section>
 
-
+       <script src="dogorcat.js" type="text/javascript"></script>
 
 </asp:Content>

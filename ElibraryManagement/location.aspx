@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="location.aspx.cs" Inherits="ElibraryManagement.location" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="./dogorcat.js" type="text/javascript">
+    
         
     </script>
 
@@ -10,16 +10,16 @@
 
 
     <section>      
-        <img id="image" src="imgs/friendlyVet.jpg" class="img-fluid" />
+        <img  src="imgs/friendlyVet.jpg" class="img-fluid" />
      </section>
     
-    <section>
+    
       
 <%-- 1st row, dog pic--%>
             <div class="row">
                 <div class="col-12">
                     <center>
-                        <img width="200px" src="imgs/pg2Dog.jpg" />
+                        <img id="image" width="200px" src="imgs/pg2Dog.jpg" />
                         <h1>Location</h1>
                     </center>
                 </div>
@@ -46,4 +46,5 @@
                     </center>
                 </div>
             </div>
+          <script src="dogorcat.js" type="text/javascript"></script>
 </asp:Content>

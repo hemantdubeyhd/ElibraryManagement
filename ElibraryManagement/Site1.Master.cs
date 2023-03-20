@@ -20,8 +20,8 @@ namespace ElibraryManagement
                     LinkButton1.Visible = false; //User loging link button
                     LinkButton2.Visible = false; //User Signup link button
                     LinkButton3.Visible = true; //logout link button
-                    LinkButton7.Visible = true; //Hello User link button
-                    LinkButton7.Text = "Hello " + Session["user"];
+                    LinkButton8.Visible = true; //Hello User link button
+                   // LinkButton7.Text = "Hello " + Session["user"];
 
 
 
@@ -32,7 +32,7 @@ namespace ElibraryManagement
                     LinkButton1.Visible = true; //User loging link button
                     LinkButton2.Visible = true; //User Signup link button
                     LinkButton3.Visible = false; //logout link button
-                    LinkButton7.Visible = false; //Hello User link button
+                   LinkButton8.Visible = false; //Hello User link button
                 }
 
               /*  if (Session["role"].Equals(""))
@@ -69,7 +69,7 @@ namespace ElibraryManagement
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('Login Successful');</script>");
+           // Response.Write("<script>alert('Login Successful');</script>");
             Session["username"] = "";
             Session["fullname"] = "";
             Session["role"] = "";
@@ -77,8 +77,13 @@ namespace ElibraryManagement
             LinkButton1.Visible = true; //User loging link button
             LinkButton2.Visible = true; //User Signup link button
             LinkButton3.Visible = false; //logout link button
-            LinkButton7.Visible = false; //Hello User link button
+            LinkButton8.Visible = false; //Hello User link button
 
+        }
+
+        protected void LinkButton8_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PuppyPlayDate.aspx");
         }
     }
 }
