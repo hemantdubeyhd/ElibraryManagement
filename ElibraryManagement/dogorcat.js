@@ -2,8 +2,8 @@
 function ChangeImageDog()
 
 {
-    alert("Bow Bow");
-    //localStorage.setItem("pet", "dog");
+    //alert("Bow Bow");
+    localStorage.setItem("pet", "dog");
     let displayimage = document.getElementById('image');
     displayimage.src = 'imgs/pg2Dog.jpg';
                     
