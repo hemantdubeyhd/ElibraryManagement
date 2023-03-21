@@ -27,13 +27,13 @@ namespace ElibraryManagement
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            Response.Write("<script>alert('testing');</script>");
+            Response.Write("<script>alert('testing0.1');</script>");
             SignUpNewMember();
         }
 
         void SignUpNewMember()
         {
-            Response.Write("<script>alert('testing under function');</script>");
+            //Response.Write("<script>alert('testing under function');</script>");
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -55,8 +55,8 @@ namespace ElibraryManagement
                 cmd.Parameters.AddWithValue("@petage", TextBox8.Text.Trim());
                 cmd.Parameters.AddWithValue("@petgender", TextBox13.Text.Trim());
                 cmd.Parameters.AddWithValue("@userid", TextBox9.Text.Trim());
-                cmd.Parameters.AddWithValue("@password", TextBox14.Text.Trim());
-                string password = "myPassword123";  // Replace with user input
+               // cmd.Parameters.AddWithValue("@password", TextBox14.Text.Trim());
+                string password = TextBox14.Text.Trim();  // Replace with user input
 
                 // Generate a random salt
                 byte[] salt = new byte[16];
@@ -70,6 +70,7 @@ namespace ElibraryManagement
                 Array.Copy(salt, 0, hashWithSaltBytes, 0, 16);
                 Array.Copy(hashBytes, 0, hashWithSaltBytes, 16, 32);
                 string hashWithSalt = Convert.ToBase64String(hashWithSaltBytes);
+                cmd.Parameters.AddWithValue("@password", hashWithSalt);//testing hash and salt
 
                 cmd.ExecuteNonQuery();
                 con.Close();
