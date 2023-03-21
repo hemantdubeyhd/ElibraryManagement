@@ -6,8 +6,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
+using System.Security.Cryptography; //for hashing password
+using System.Text;
 
 namespace ElibraryManagement
 {
@@ -52,10 +56,24 @@ namespace ElibraryManagement
                 cmd.Parameters.AddWithValue("@petgender", TextBox13.Text.Trim());
                 cmd.Parameters.AddWithValue("@userid", TextBox9.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", TextBox14.Text.Trim());
-     
+                string password = "myPassword123";  // Replace with user input
+
+                // Generate a random salt
+                byte[] salt = new byte[16];
+                new RNGCryptoServiceProvider().GetBytes(salt);
+
+                // Hash the password with the salt using SHA256
+                byte[] hashBytes = new Rfc2898DeriveBytes(password, salt, 10000).GetBytes(32);
+
+                // Combine the salt and hash bytes into a single string
+                byte[] hashWithSaltBytes = new byte[48];
+                Array.Copy(salt, 0, hashWithSaltBytes, 0, 16);
+                Array.Copy(hashBytes, 0, hashWithSaltBytes, 16, 32);
+                string hashWithSalt = Convert.ToBase64String(hashWithSaltBytes);
+
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('testing');</script>");
+               // Response.Write("<script>alert('testing');</script>");
                 Response.Write("<script>alert('Sign Up Sucessfull, Go to User Login to Loging');</script>"); 
             }
             catch (Exception ex)
